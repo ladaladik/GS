@@ -102,9 +102,10 @@ public Action OnTakeDmg(int victim, int &attacker, int &inflictor, float &damage
 		if (GetClientTeam(attacker) == CS_TEAM_T) //team T
 		{
 			if (IsVIP(attacker))
-				
+			{
 			damage = OnePercent * GAMESETpercenttvip.FloatValue + damage; //VIP T
 			return Plugin_Changed;
+			}
 		}
 		else if (!IsVIP(attacker))
 		{
